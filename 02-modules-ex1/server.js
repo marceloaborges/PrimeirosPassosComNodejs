@@ -3,10 +3,10 @@
 console.log(operations.var1);
 console.log(operations.var2);*/
 
-/*const funcoes = require('./funcoes');
+const funcoes = require('./funcoes');
 
-const resultado = funcoes(2);
-console.log(resultado.msg, resultado.value);*/
+const resultado = funcoes(4);
+console.log(resultado.msg, resultado.value);
 
 
 const funcoes2 =  require('./funcoes2.js');

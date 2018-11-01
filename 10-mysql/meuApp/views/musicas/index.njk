@@ -1,0 +1,41 @@
+{% extends "layout.njk" %}
+
+{% block pagina %}
+
+    {# Meu código da página vai aqui #}
+    <h1>{{title}}</h1>   
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NOME</th>
+                <th>ARTISTA</th>
+                <th>ESTRELAS</th>
+                <th>AÇÕES</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for musica in musicas %}
+            <tr>
+                <td>{{musica.id}}</td>
+                <td>{{musica.nome}}</td>
+                <td>{{musica.artista}}</td>
+                <td>
+                    {% for i in range(0, musica.estrelas) %}
+                        <span class="glyphicon glyphicon-star"></span>
+                    {% endfor %}
+                </td>
+                <td>
+                    <a href="#" class="btn btn-primary">Editar</a>
+                    <a href="#" class="btn btn-danger">Excluir</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="row">
+        <a href="/musicas/add" class="btn btn-default">Novo Cadastro</a>
+    </div>
+
+{% endblock %}
